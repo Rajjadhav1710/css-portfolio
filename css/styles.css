@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    /* font-size: 562.5%;for 90px font size */
+    /* font-size: 5.625em; */
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    color: #66BFBF;
+    /* line-height: 2; */
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    /* font-weight: normal; */
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif; 
+    color: #11999E;
+}
+/* when we do text-align : center text becomes centered relative to its content area */
+/* we can use text-align : center to center "html images" but not "css background images" */
+/* to center elements we can use text-align property or (margin:0 auto; if element has space around it.) */
+/* So the easiest way of centering elements is by tapping into a property called text align and that property has to be set inside the parent container, */
+/* the other way of centering an element is by using the margin.So there is a value called auto which when applied will center the element either vertically or horizontally. */
+
+/* if two elements are in normal flow and close to each other and if we change position of one of the element keeping them in normal flow then other element's position will also be changed*/
+.top-container {
+    background-color: #E4F9F5;
+    position: relative;
+    padding-top: 9%;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.middle-container {
+   /* background-color: rgb(41, 37, 37); */
+}
+
+.bottom-container {
+    background-color: #66BFBF;
+}
+
+.bottom-cloud{
+    position: absolute;
+    left: 18%;
+    bottom: 40%;
+}
+
+.top-cloud{ 
+    position: absolute;
+    top:9%;
+    right:20%;
+}
+
+/* Now before we do any further positional tweaking we should really format the text because by changing 
+the font, the font size etc., we’re going to affect the positioning of our elements as well. */ 
+
+/* Now one of the most important decisions that you will have to make when you are designing your web site is what are the fonts that you're going to choose */
+
+/* Now there are two major font families and that is the Serif and the Sans-serif fonts. */
+/* Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance. */
+/* Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look. */
+
+/* Now we can broadly define whether we want a Sans-serif or a Serif typeface for any text on our website. */
+
+/* monospace is when each of the characters inside the text take up the same amount of width
+ that's usually a typeface that we use for coding because it makes everything super easy to read.
+ 
+ Now for most browsers the default Serif is the Times font and the default Sans-serif is Arial*/
+
+ /* instead of specifying just the Sans-serif broad stroke family, I can add a specific font or typeface in front
+ For example, if I wanted the Verdana font, then I can simply type verdana, and then have a comma, and then
+ separate that from the sans-serif family.
+  this line of code does is that it sets the font family for all the text inside the body but
+  it first asks the browser to try and render all the text in the Verdana font.
+  Now if for some reason the browser or the operating system that the user is using doesn't have this
+  font installed, then it will default to whatever is the Sans-serif font that is installed on their system.*/
+
+  /* this means different systems will render text differently acccording to availability of the font on
+  user's system.but we can use web safe fonts (nearly all systems have it). */
+
+  /* Although these are called web safe fonts and it's basically saying that if you choose these sets of fonts then you have the maximum chance of getting it rendered correctly as you're seeing yourself when you design it
+  but actually no font is actually 100 percent web safe. */
+
+  /* So what can you do if you want to use a font but you're not sure if everyone has it installed, right?
+  For example if I want to use Helvetica then there's only 7 percent of users on Windows who are going to see it rendered in that font. Well then you would need fallbacks. 
+  how we're going from specific to less specific and all the while ensuring that we're getting roughly a similar sort of typeface and similar sort of feel no matter which fonts the users have installed or not installed.*/
+
+  /* Now what if we were even more picky as designers?
+  What if I really want everybody who looks at my web site to see exactly the same thing as I designed
+  I want them to see the design that I intended instead of whatever font it is that they happened to have installed.
+  What can I do to ensure that everybody has the same viewing experience with regards to the fonts on my website?
+  
+  Well, you could use something called font embedding.
+  if we head over to fonts.google.com these are all fonts that are free for commercial use that you can simply embed into your website.
+   give link  specifies a location where, if users don't have these fonts already installed or cached on their
+   system, then the browser will take them to this location and grab those fonts for them.*/
+
+
+  /* Sans-serif : without serif */
+
+  /* CSS Sizing */
+  /* font size:
+  if we use absolute length units then So on certain browsers, if the user goes into preferences and they change their default font size for their Web page  for example, if they need a super large text in order to see, then you'll notice that font size does not change, even though the rest of the text does.And this is because this is not a dynamic size.
+  
+  So in order to make it dynamic, there's two options.
+  then instead of using pixels instead we can use something like a percentage.
+  100 percent in terms of font size is actually a 16 pixel size.*/
+
+  /* the other way of specifying a dynamic font size is by using a unit called the em.
+  the em in this case is actually the phonetic pronunciation of the letter M, and the reason is because in typesetting in the olden days that em or the M rather is the width of the capital letter M, and so that means that when you say one M, then you want the font size to be one times the width, the capital letter M
+  Now in modern days, this is no longer true.*/
+
+  /* one of the things that we got in the latest version of success, which is rem units
+  Means ignore all of the parents settings for the font size and just set it to this relative to the root.
+  So that means that it doesn't matter what we've done here or in its enclosing containers or parents,
+  it will be five point sixty five times 16 pixels as long as we add the are in front of the M. */
+
+  /* So when sizing text, my personal recommendation to you is to use rem instead of em or percentages or pixels
+   because that is the most adaptable and also the most reliable and least error prone.*/
+
+/* with margined, top and padding and all of those other things where we specify a size.You can also use the em, the rem. or the percentage values. But in this case, I actually prefer to stick to using pixels because it's more precise and it's much easier to see what's going on when you inspect it in using the box model.*/
+
+a{
+    color: #11999E;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover{
+    color: #40514E;
+}
+
+.msu-link:hover{
+    color: #11999E;
+}
+
+.pro{
+    text-decoration: underline;  
+}
+/* CSS Float and Clear */
+/* in the next lesson we're going to learn about the final positioning system which is floating. */
+
+/* all we need to do is start getting our Skills section laid out in a way that looks a little bit better*/
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;/*that just means auto on all four sides, which will center it */
+    text-align: left;
+    line-height: 2;
+}
+
+.code-img{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilli-img{
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+}
+
+/* How can I make my text wrap around my image? 
+using float property*/
+/* want this image to be on the left but I want my text to be on the right of the image and wrapping around the image as necessary. we can make the image float to the left of the text and make the text wrap around it by simply changing one property on image And that is the float property..*/
+
+/* can you figure out a way of having 30 pixels of space between this text and this image?
+we can use margin property(bcz image is still in normal flow),it will push text far from image */
+
+/* Now sometimes when you float an element you might not want all of the text to be wrapped around it.
+ we can actually use another property to make sure that this text does not wrap and end up at the bottom
+ , and that property is called clear. */
+
+/* .code-skill-description{
+    clear: left;
+} */
+
+/*  if I use the clear property to clear its left side then that prevents it from wrapping anything
+on the left. */
+/* If you think about clear as almost like the anti float then that starts to make a little bit more sense.
+for this paragraph we said to clear it's left which means make sure that that left margin is clear
+and not wrapped around anything */
+
+/* .chilli-skill-description{
+    clear: right;
+} */
+
+/* Now as they say with great power comes great responsibility.
+Float is one of the most commonly used and abused CSS properties. 
+The thing to remember is that it has a whole bunch of corner cases.
+And I recommend to only use float when really really necessary and only use it for what it's meant, which
+is wrapping text around a certain element, and don't use it for positioning.
+Instead use what we learned about positioning like relative or absolute positioning or using the margin
+and the padding for the layout and the positioning of your web site and to leave the float property only
+for the cases of wrapping text.Then you will surely get into less trouble and less problems than if you try to use a float just as a sort of free for all layout property, which you see a lot of people mistakenly do.*/
+
+p{
+    color: #40514E;
+}
+
+/* everything in css is box. <hr> is also a box with default height 0. we can style <hr> 
+by styling its border of the <hr> box */
+hr{
+    border-style: none;
+    border-top: 6px dotted #c9d4d4;
+    /* width: 4%; *//*it's important to use percent here so that it scales when my web site scales*/
+    width: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.btn {
+    background: #66BFBF;
+    background-image: -webkit-linear-gradient(top,  #1bd4d4, #328a8a);
+    background-image: -moz-linear-gradient(top,  #1bd4d4, #328a8a);
+    background-image: -ms-linear-gradient(top,  #1bd4d4, #328a8a);
+    background-image: -o-linear-gradient(top,  #1bd4d4, #328a8a);
+    background-image: -webkit-gradient(to bottom,  #1bd4d4, #328a8a);
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px 20px;
+   
+   
+   
+   
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+ }
+ 
+ .btn:hover {
+   
+    background: #328a8a;
+    background-image: -webkit-linear-gradient(top, #66BFBF, #328a8a);
+    background-image: -moz-linear-gradient(top, #66BFBF, #328a8a);
+    background-image: -ms-linear-gradient(top, #66BFBF, #328a8a);
+    background-image: -o-linear-gradient(top, #66BFBF, #328a8a);
+    background-image: -webkit-gradient(to bottom, #66BFBF, #328a8a);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+ }
+
+ .bottom-container p{
+    color: #EAF6F6;
+    margin: 0;
+    padding-bottom: 40px;
+    font-size: 0.75rem;
+ }
+
+ .bottom-container a{
+     display: inline-block;
+    padding: 50px 25px 30px 25px;
+ }
+
+ .profile-picture{
+     border-radius: 50%;
+     margin-top: 80px;
+     
+ }
+
+.top-container h1{
+    position: relative;
+    z-index: 1;
+}
+
+.top-container h2{
+    position: relative;
+    z-index: 1;
+}
+
+.mountain-img{
+    max-width: 85%;
+}
+
+.profile p{
+    line-height: 2;
+}
+
+nav{
+    background-color: rgba(228, 249, 245,0.96);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav img{
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+nav a{
+    display: inline-block;
+    margin: 10px 25px;
+}
+
+nav a:hover{
+    color: #40514E;
+}
+
+/* it's a great skill as a web designer to be able to look at a sketched out layout or a mockup and to be able to implement that in code inside your css and html */
